@@ -1,0 +1,17 @@
+[build]
+  publish = "public"
+  functions = "netlify/functions"
+
+[functions]
+  node_bundler = "esbuild"
+
+# The UI is static; forward its API and OData requests to the Netlify Function.
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/server/api/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/sap/opu/odata/sap/*"
+  to = "/.netlify/functions/server/sap/opu/odata/sap/:splat"
+  status = 200
