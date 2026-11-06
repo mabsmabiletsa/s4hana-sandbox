@@ -1,0 +1,20 @@
+{
+  "name": "s4hana-sandbox",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Mock SAP S/4HANA-style sandbox: OData V2 services + Fiori-inspired web UI",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "seed": "node scripts/reset.js",
+    "test": "node --test test/"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2"
+  }
+}
